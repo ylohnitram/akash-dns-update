@@ -1,0 +1,29 @@
+{
+  "name": "akash-dns-update",
+  "version": "0.0.1",
+  "description": "update dns records for an akash service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mobsikx/akash-dns-update.git"
+  },
+  "keywords": [
+    "akash",
+    "njalla",
+    "dns"
+  ],
+  "author": "martin holy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mobsikx/akash-dns-update/issues"
+  },
+  "homepage": "https://github.com/mobsikx/akash-dns-update#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "host-to-ip": "^0.3.2",
+    "njalla-dns": "^2.0.0"
+  }
+}
