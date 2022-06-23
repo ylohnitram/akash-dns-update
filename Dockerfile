@@ -6,4 +6,4 @@ RUN mkdir /app
 WORKDIR /app
 ADD app.tgz .
 
-CMD["node", "/app/index.js"]
+CMD ["node", "/app/index.js"]
