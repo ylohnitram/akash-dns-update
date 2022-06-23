@@ -13,7 +13,13 @@ const hostToIp = require('dns');
     // Get records
     const records = await dns.getRecords(cms_fqdn)
 
-    await hostToIp.lookup(cms_fqdn, function(err, result) {
+    await hostToIp.lookup(akash_host, function(err, result) {
+        console.log('ip         = ' + result)
         dns.update(cms_fqdn, records.find((r) => r.id === 701542), { content: result })
     })
+
+
+    console.log('cms_fqdn   = ' + cms_fqdn)
+    console.log('akash_host = ' + akash_host)
+    
 })()
