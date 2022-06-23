@@ -17,8 +17,7 @@ const hostToIp = require('dns');
         console.log('ip         = ' + result)
         dns.update(cms_fqdn, records.find((r) => r.id === 701542), { content: result })
     })
-
-
+    
     console.log('cms_fqdn   = ' + cms_fqdn)
     console.log('akash_host = ' + akash_host)
     
