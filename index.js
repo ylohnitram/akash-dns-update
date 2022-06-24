@@ -6,6 +6,7 @@ const hostToIp = require('dns');
     // Read the env variable specified by akash pro
     const akash_host = process.env.AKASH_CLUSTER_PUBLIC_HOSTNAME
     const cms_fqdn = process.env.CMS_DNS_A
+    const njala_id = process.env.NJALLA_REC_ID
 
     // Initialize your client with your API key (You can grab one at njal.la/settings/api/)
     const dns = njalla(process.env.NJALLA_API_KEY)
@@ -15,7 +16,7 @@ const hostToIp = require('dns');
 
     await hostToIp.lookup(akash_host, function(err, result) {
         console.log('ip         = ' + result)
-        dns.update(cms_fqdn, records.find((r) => r.id === 701542), { content: result })
+        dns.update(cms_fqdn, records.find((r) => r.id === njala_id), { content: result })
     })
     
     console.log('cms_fqdn   = ' + cms_fqdn)
