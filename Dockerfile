@@ -6,4 +6,7 @@ RUN mkdir /app
 WORKDIR /app
 ADD app.tgz .
 
-CMD ["node", "/app/index.js"]
+COPY ./docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
