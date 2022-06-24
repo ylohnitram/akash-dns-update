@@ -21,5 +21,5 @@ const hostToIp = require('dns');
     
     console.log('cms_fqdn   = ' + cms_fqdn)
     console.log('akash_host = ' + akash_host)
-    
+    console.log('njala_id   = ' + njala_id)    
 })()
